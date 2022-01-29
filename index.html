@@ -59,7 +59,7 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -208,7 +208,7 @@
             
 
   
-    <article id="post-Text" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -216,7 +216,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/01/28/Text/" target="_blank">Text</a>
+	  <a class="article-title" href="/2022/01/29/Python/" target="_blank">Python-if 语句</a>
   
     </h1>
   
@@ -224,8 +224,8 @@
 
   
   
-<a href="/2022/01/28/Text/" class="archive-article-date">
-        <time datetime="2022-01-28T10:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-28</time>
+<a href="/2022/01/29/Python/" class="archive-article-date">
+        <time datetime="2022-01-29T10:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-29</time>
 </a>
 
   
@@ -237,7 +237,27 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Text</p>
+    <h1 id="一-条件测试"><a href="#一-条件测试" class="headerlink" title="一 条件测试"></a>一 条件测试</h1><p>​    每条if语句的核心都是一个值为True或False的表达式,这种表达式被称为条件测试。如果条件测试的值为True，Python就执行紧跟在if语句后面的代码；如果为False，Python就忽略这些代码。</p>
+<h2 id="1-检查是否相等"><a href="#1-检查是否相等" class="headerlink" title="1.检查是否相等"></a>1.检查是否相等</h2><p>​    大多数条件测试都将一个变量的当前值同特定值进行比较。最简单的条件测试检查变量的值是否与特定值相等，运行代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查是否相等</span></span><br><span class="line">car = <span class="string">&#x27;bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;bmw&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;other&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​    运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-检查是否相等时不考虑大小写"><a href="#2-检查是否相等时不考虑大小写" class="headerlink" title="2.检查是否相等时不考虑大小写"></a>2.检查是否相等时不考虑大小写</h2><p>​    在Python中检查是否相等时区分大小写，例如，两个大小写不同的值会被视为不相等：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅首字母的大小写不同</span></span><br><span class="line">car = <span class="string">&#x27;bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;Bmw&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​    运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">False</span><br></pre></td></tr></table></figure>
+
+<p>​    如果大小写很重要，这种行为有其优点。但如果大小写无关紧要，而只想检查变量的值，可将变量的值转换为小写，再进行比较：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅首字母的大小写不同,调用方法使其所有字母转化为小写</span></span><br><span class="line">car = <span class="string">&#x27;Bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car.lower() == <span class="string">&#x27;bmw&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​    运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure>
+
+
+
 
     
 
@@ -254,7 +274,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">for text</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Python语法基础</a>
         		</li>
       		
 		</ul>
@@ -264,7 +284,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/01/28/Text/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/01/29/Python/">展开全文 >></a>
     </p>
     
 
@@ -510,7 +530,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">for text</a>
+                <a href="javascript:void(0)" class="js-tag color1">Python语法基础</a>
               </li>
             
             <div class="clearfix"></div>
@@ -728,6 +748,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
