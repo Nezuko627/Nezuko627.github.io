@@ -275,6 +275,27 @@
 <p>​    运行结果如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure>
 
+<h2 id="3-检查是否不相等"><a href="#3-检查是否不相等" class="headerlink" title="3.检查是否不相等"></a>3.检查是否不相等</h2><p>​    要判断两个值是否不相等，可结合使用惊叹号和等号，其中惊叹号表示不，与大部分编程语言一样。下面再使用一条if语句来演示如何使用不等运算符。我们将把要求的比萨配料存储在一个变量中，再打印一条消息，指出顾客要求的配料是否是小银鱼（anchovies）:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">requested_topping = <span class="string">&#x27;mushrooms&#x27;</span></span><br><span class="line"><span class="keyword">if</span> requested_topping != <span class="string">&#x27;anchovies&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hold the anchovies!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​    运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hold the anchovies!</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-比较数字"><a href="#4-比较数字" class="headerlink" title="4.比较数字"></a>4.比较数字</h2><p>​    条件语句中可包含各种数字比较，如小于、小于等于、大于、大于等于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">19</span></span><br><span class="line">age &lt; <span class="number">21</span>  <span class="comment"># True</span></span><br><span class="line">age &lt;= <span class="number">21</span>  <span class="comment"># True</span></span><br><span class="line">age &gt; <span class="number">21</span>  <span class="comment"># False</span></span><br><span class="line">age &gt;= <span class="number">21</span>  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-检查多个条件"><a href="#5-检查多个条件" class="headerlink" title="5.检查多个条件"></a>5.检查多个条件</h2><pre><code>### 1.使用and检查多个文件
+</code></pre>
+<p>​    要检查是否两个条件都为True，可使用关键字and将两个条件测试合而为一；如果每个测试都通过了，则整个表达式就为True；如果至少有一个测试没有通过，则整个表达式为False。</p>
+<p>​    例如，要检查是否两个人都不小于21岁，可使用下面的测试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age_0 = <span class="number">22</span></span><br><span class="line">age_1 = <span class="number">18</span></span><br><span class="line">age_0 &gt;= <span class="number">21</span> <span class="keyword">and</span> age_1 &gt;=<span class="number">21</span>  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-使用or检查多个文件"><a href="#2-使用or检查多个文件" class="headerlink" title="2.使用or检查多个文件"></a>2.使用or检查多个文件</h3><p>​    关键字or也能够让你检查多个文件，但只要至少有一个条件满足，就能通过整个测试。仅当两个测试都没有通过的时候，使用or表达式才为False。</p>
+<h2 id="6-检查特定值是否包含在列表中"><a href="#6-检查特定值是否包含在列表中" class="headerlink" title="6.检查特定值是否包含在列表中"></a>6.检查特定值是否包含在列表中</h2><p>​    要判断特定的值是否已经包含在用户名列表中，可使用关键字in。你可能为比萨店编写一些代码；这些代码首先创建一个列表，其中包含用户点的比萨配料，然后检查特定的配料是否包含在该列表中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;onions&#x27;</span>, <span class="string">&#x27;pineapple&#x27;</span>]</span><br><span class="line"><span class="string">&#x27;mushrooms&#x27;</span> <span class="keyword">in</span> requested_toppings  <span class="comment"># True</span></span><br><span class="line"><span class="string">&#x27;pepperoni&#x27;</span> <span class="keyword">in</span> requested_toppings  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+
+
 
     
 
