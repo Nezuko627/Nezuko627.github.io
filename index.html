@@ -235,7 +235,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/01/29/Python/" target="_blank">Python-if 语句</a>
+	  <a class="article-title" href="/2022/02/03/Python/" target="_blank">Python-if 语句</a>
   
     </h1>
   
@@ -243,8 +243,8 @@
 
   
   
-<a href="/2022/01/29/Python/" class="archive-article-date">
-        <time datetime="2022-01-29T10:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-29</time>
+<a href="/2022/02/03/Python/" class="archive-article-date">
+        <time datetime="2022-02-03T09:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
 </a>
 
   
@@ -256,46 +256,86 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="一-条件测试"><a href="#一-条件测试" class="headerlink" title="一 条件测试"></a>一 条件测试</h1><p>​    每条if语句的核心都是一个值为True或False的表达式,这种表达式被称为条件测试。如果条件测试的值为True，Python就执行紧跟在if语句后面的代码；如果为False，Python就忽略这些代码。</p>
-<h2 id="1-检查是否相等"><a href="#1-检查是否相等" class="headerlink" title="1.检查是否相等"></a>1.检查是否相等</h2><p>​    大多数条件测试都将一个变量的当前值同特定值进行比较。最简单的条件测试检查变量的值是否与特定值相等，运行代码如下：</p>
+    <h1 id="一-条件测试"><a class="markdownIt-Anchor" href="#一-条件测试">#</a> 一 条件测试</h1>
+<p>​	每条 if 语句的核心都是一个值为 True 或 False 的表达式，这种表达式被称为条件测试。如果条件测试的值为 True，Python 就执行紧跟在 if 语句后面的代码；如果为 False，Python 就忽略这些代码。</p>
+<h2 id="1检查是否相等"><a class="markdownIt-Anchor" href="#1检查是否相等">#</a> 1. 检查是否相等</h2>
+<p>​	大多数条件测试都将一个变量的当前值同特定值进行比较。最简单的条件测试检查变量的值是否与特定值相等，运行代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查是否相等</span></span><br><span class="line">car = <span class="string">&#x27;bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;bmw&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;other&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​    运行结果如下：</p>
+<p>​	运行结果如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-检查是否相等时不考虑大小写"><a href="#2-检查是否相等时不考虑大小写" class="headerlink" title="2.检查是否相等时不考虑大小写"></a>2.检查是否相等时不考虑大小写</h2><p>​    在Python中检查是否相等时区分大小写，例如，两个大小写不同的值会被视为不相等：</p>
+<h2 id="2检查是否相等时不考虑大小写"><a class="markdownIt-Anchor" href="#2检查是否相等时不考虑大小写">#</a> 2. 检查是否相等时不考虑大小写</h2>
+<p>​	在 Python 中检查是否相等时区分大小写，例如，两个大小写不同的值会被视为不相等：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅首字母的大小写不同</span></span><br><span class="line">car = <span class="string">&#x27;bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car == <span class="string">&#x27;Bmw&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​    运行结果如下：</p>
+<p>​	运行结果如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">False</span><br></pre></td></tr></table></figure>
-
-<p>​    如果大小写很重要，这种行为有其优点。但如果大小写无关紧要，而只想检查变量的值，可将变量的值转换为小写，再进行比较：</p>
+<p>​	如果大小写很重要，这种行为有其优点。但如果大小写无关紧要，而只想检查变量的值，可将变量的值转换为小写，再进行比较：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 仅首字母的大小写不同,调用方法使其所有字母转化为小写</span></span><br><span class="line">car = <span class="string">&#x27;Bmw&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(car.lower() == <span class="string">&#x27;bmw&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​    运行结果如下：</p>
+<p>​	运行结果如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-检查是否不相等"><a href="#3-检查是否不相等" class="headerlink" title="3.检查是否不相等"></a>3.检查是否不相等</h2><p>​    要判断两个值是否不相等，可结合使用惊叹号和等号，其中惊叹号表示不，与大部分编程语言一样。下面再使用一条if语句来演示如何使用不等运算符。我们将把要求的比萨配料存储在一个变量中，再打印一条消息，指出顾客要求的配料是否是小银鱼（anchovies）:</p>
+<h2 id="3检查是否不相等"><a class="markdownIt-Anchor" href="#3检查是否不相等">#</a> 3. 检查是否不相等</h2>
+<p>​	要判断两个值是否不相等，可结合使用惊叹号和等号，其中惊叹号表示不，与大部分编程语言一样。下面再使用一条 if 语句来演示如何使用不等运算符。我们将把要求的比萨配料存储在一个变量中，再打印一条消息，指出顾客要求的配料是否是小银鱼（anchovies）:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">requested_topping = <span class="string">&#x27;mushrooms&#x27;</span></span><br><span class="line"><span class="keyword">if</span> requested_topping != <span class="string">&#x27;anchovies&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hold the anchovies!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​    运行结果如下：</p>
+<p>​	运行结果如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hold the anchovies!</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-比较数字"><a href="#4-比较数字" class="headerlink" title="4.比较数字"></a>4.比较数字</h2><p>​    条件语句中可包含各种数字比较，如小于、小于等于、大于、大于等于：</p>
+<h2 id="4比较数字"><a class="markdownIt-Anchor" href="#4比较数字">#</a> 4. 比较数字</h2>
+<p>​	条件语句中可包含各种数字比较，如小于、小于等于、大于、大于等于：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">19</span></span><br><span class="line">age &lt; <span class="number">21</span>  <span class="comment"># True</span></span><br><span class="line">age &lt;= <span class="number">21</span>  <span class="comment"># True</span></span><br><span class="line">age &gt; <span class="number">21</span>  <span class="comment"># False</span></span><br><span class="line">age &gt;= <span class="number">21</span>  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-检查多个条件"><a href="#5-检查多个条件" class="headerlink" title="5.检查多个条件"></a>5.检查多个条件</h2><pre><code>### 1.使用and检查多个文件
-</code></pre>
-<p>​    要检查是否两个条件都为True，可使用关键字and将两个条件测试合而为一；如果每个测试都通过了，则整个表达式就为True；如果至少有一个测试没有通过，则整个表达式为False。</p>
-<p>​    例如，要检查是否两个人都不小于21岁，可使用下面的测试：</p>
+<h2 id="5检查多个条件"><a class="markdownIt-Anchor" href="#5检查多个条件">#</a> 5. 检查多个条件</h2>
+<h3 id="1使用and检查多个文件"><a class="markdownIt-Anchor" href="#1使用and检查多个文件">#</a> 1. 使用 and 检查多个文件</h3>
+<p>​	要检查是否两个条件都为 True，可使用关键字 and 将两个条件测试合而为一；如果每个测试都通过了，则整个表达式就为 True；如果至少有一个测试没有通过，则整个表达式为 False。</p>
+<p>​	例如，要检查是否两个人都不小于 21 岁，可使用下面的测试：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age_0 = <span class="number">22</span></span><br><span class="line">age_1 = <span class="number">18</span></span><br><span class="line">age_0 &gt;= <span class="number">21</span> <span class="keyword">and</span> age_1 &gt;=<span class="number">21</span>  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-使用or检查多个文件"><a href="#2-使用or检查多个文件" class="headerlink" title="2.使用or检查多个文件"></a>2.使用or检查多个文件</h3><p>​    关键字or也能够让你检查多个文件，但只要至少有一个条件满足，就能通过整个测试。仅当两个测试都没有通过的时候，使用or表达式才为False。</p>
-<h2 id="6-检查特定值是否包含在列表中"><a href="#6-检查特定值是否包含在列表中" class="headerlink" title="6.检查特定值是否包含在列表中"></a>6.检查特定值是否包含在列表中</h2><p>​    要判断特定的值是否已经包含在用户名列表中，可使用关键字in。你可能为比萨店编写一些代码；这些代码首先创建一个列表，其中包含用户点的比萨配料，然后检查特定的配料是否包含在该列表中：</p>
+<h3 id="2使用or检查多个文件"><a class="markdownIt-Anchor" href="#2使用or检查多个文件">#</a> 2. 使用 or 检查多个文件</h3>
+<p>​	关键字 or 也能够让你检查多个文件，但只要至少有一个条件满足，就能通过整个测试。仅当两个测试都没有通过的时候，使用 or 表达式才为 False。</p>
+<h2 id="6检查特定值是否包含在列表中"><a class="markdownIt-Anchor" href="#6检查特定值是否包含在列表中">#</a> 6. 检查特定值是否包含在列表中</h2>
+<p>​	要判断特定的值是否已经包含在用户名列表中，可使用关键字 in。你可能为比萨店编写一些代码；这些代码首先创建一个列表，其中包含用户点的比萨配料，然后检查特定的配料是否包含在该列表中：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;onions&#x27;</span>, <span class="string">&#x27;pineapple&#x27;</span>]</span><br><span class="line"><span class="string">&#x27;mushrooms&#x27;</span> <span class="keyword">in</span> requested_toppings  <span class="comment"># True</span></span><br><span class="line"><span class="string">&#x27;pepperoni&#x27;</span> <span class="keyword">in</span> requested_toppings  <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
-
-
-
+<h2 id="7检查特定值是否不包含在列表中"><a class="markdownIt-Anchor" href="#7检查特定值是否不包含在列表中">#</a> 7. 检查特定值是否不包含在列表中</h2>
+<p>​	这里可以使用关键字 not in。例如，如果有一个列表，其中包含被禁止在论坛上发表评论的用户，就可以在允许用户提交评论前检查他是否被禁言：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">banned_users = [<span class="string">&#x27;andrew&#x27;</span>, <span class="string">&#x27;carolina&#x27;</span>, <span class="string">&#x27;david&#x27;</span>]</span><br><span class="line">user = <span class="string">&#x27;marie&#x27;</span></span><br><span class="line"><span class="keyword">if</span> user <span class="keyword">not</span> <span class="keyword">in</span> banned_users:</span><br><span class="line">    <span class="built_in">print</span>(user.title() + <span class="string">&quot;, you can post a response if you wish.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Marie, you can post a response if you wish.</span><br></pre></td></tr></table></figure>
+<h1 id="二-if语句"><a class="markdownIt-Anchor" href="#二-if语句">#</a> 二 if 语句</h1>
+<h2 id="1if-else-语句"><a class="markdownIt-Anchor" href="#1if-else-语句">#</a> 1.if - else 语句</h2>
+<p>​	经常需要在条件测试通过时执行一个操作，并在没有通过测试时执行另一个操作；在这种情况下，可使用 Python 提供的 if-else 语句。if-else 语句类似于简单的 if 语句，但其中的 else 语句让你能够在指定条件测试未通过时要执行的操作。下面的代码在一个人够投票的年龄时显示与前面相同的消息，同时在这个人不够投票年龄时也显示一条消息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">17</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;You are old enough to vote!&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Have you registered to vote yet?&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Sorry, you are too young to vote.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Please register to vote as soon as you turn 18!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>age 小于 18，条件测试未通过，因此执行 else 代码块中的代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sorry, you are too young to vote.</span><br><span class="line">Please register to vote as soon as you turn 18!</span><br></pre></td></tr></table></figure>
+<h2 id="2if-elif-else结构"><a class="markdownIt-Anchor" href="#2if-elif-else结构">#</a> 2.if - elif - else 结构</h2>
+<p>​	Python 只执行 if-elif-else 结构中的一个代码块，它依次检查每个条件测试，直到遇到通过了的条件测试。测试通过后，Python 将执行紧跟在它后面的代码，并跳过余下的测试。</p>
+<p>​	在现实生活中，很多情况需要考虑的情形都超过两个。例如，来看一个根据年龄段收费的游乐场：</p>
+<ul>
+<li>4 岁以下免费；</li>
+<li>4 ~ 18 岁收费 5 美元；</li>
+<li>18 岁（含）以上收费 10 美元。</li>
+</ul>
+<p>​	如果只使用一条 if 语句确定门票的价格：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">4</span>:</span><br><span class="line">    price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">18</span>:</span><br><span class="line">    price = <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    price = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Your admission cost is $&quot;</span> + <span class="built_in">str</span>(price) + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your admission cost is $5.</span><br></pre></td></tr></table></figure>
+<h2 id="3测试多个条件"><a class="markdownIt-Anchor" href="#3测试多个条件">#</a> 3. 测试多个条件</h2>
+<p>​	在这里不作赘述，如果你只想执行一个代码块，就使用 if - elif - else 结构；如果要运行多个代码块，就使用一系列独立的 if 语句。</p>
+<h1 id="三-使用if语句处理列表"><a class="markdownIt-Anchor" href="#三-使用if语句处理列表">#</a> 三 使用 if 语句处理列表</h1>
+<h2 id="1检查特殊元素"><a class="markdownIt-Anchor" href="#1检查特殊元素">#</a> 1. 检查特殊元素</h2>
+<p>​	在这里我们通过前面的比萨店示例研究如何检查列表中的特殊值，并对其做合适的处理。这家比萨店在制作比萨时，每添加一种配料都打印一条消息。通过创建一个列表，在其中包含顾客点的配料，并使用一个循环来指出添加到比萨中的配料，可以以极高的效率编写这样的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> requested_topping <span class="keyword">in</span> requested_toppings:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Adding &quot;</span> + requested_topping + <span class="string">&quot;.&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Adding mushrooms.</span><br><span class="line">Adding green peppers.</span><br><span class="line">Adding extra cheese.</span><br><span class="line"></span><br><span class="line">Finished making your pizza!</span><br></pre></td></tr></table></figure>
+<p>​	然而，如果比萨店的青椒用完了，该如何处理呢？于是，我们可以在 for 循环中包含一条 if 语句：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> requested_topping <span class="keyword">in</span> requested_toppings:</span><br><span class="line">    <span class="keyword">if</span> requested_topping == <span class="string">&#x27;green peppers&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Sorry, we are out of green peppers right now.&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Adding &quot;</span> + requested_topping + <span class="string">&quot;.&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Adding mushrooms.</span><br><span class="line">Sorry, we are out of green peppers right now.</span><br><span class="line">Adding extra cheese.</span><br><span class="line"></span><br><span class="line">Finished making your pizza!</span><br></pre></td></tr></table></figure>
+<h2 id="2确定列表不是空的"><a class="markdownIt-Anchor" href="#2确定列表不是空的">#</a> 2. 确定列表不是空的</h2>
+<p>​	下面在制作比萨前检查顾客点的配料列表是否为空。如果列表为空，就向顾客询问是否要点普通比萨；如果列表不为空，就像前面的示例那样制作比萨：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = []</span><br><span class="line"><span class="keyword">if</span> requested_toppings:</span><br><span class="line">    <span class="keyword">for</span> requested_topping <span class="keyword">in</span> requested_toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Adding &quot;</span> + requested_topping + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Are you sure you want a plain pizza?&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Are you sure you want a plain pizza?</span><br></pre></td></tr></table></figure>
+<h2 id="3使用多个列表"><a class="markdownIt-Anchor" href="#3使用多个列表">#</a> 3. 使用多个列表</h2>
+<p>​	顾客的要求往往五花八门，在比萨配料方面尤其如此。如果顾客要在比萨中添加炸薯条，该怎么办呢？可使用列表和 if 语句来确定能否满足顾客的要求。</p>
+<p>​	来看看在制作比萨前如何拒绝怪异的配料要求。下面的示例定义了两个列表，其中第一个列表包含比萨店供应的配料，而第二个列表包含顾客点的配料。这次对于 requested_toppings 中的每个元素，都检查它是否是比萨店供应的配料，再决定是否在比萨中添加它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">available_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;olives&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>,</span><br><span class="line">                     <span class="string">&#x27;pepperoni&#x27;</span>, <span class="string">&#x27;pineapple&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>]</span><br><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;french fries&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> requested_topping <span class="keyword">in</span> requested_toppings:</span><br><span class="line">    <span class="keyword">if</span> requested_topping <span class="keyword">in</span> available_toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Adding &quot;</span> + requested_topping + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Sorry, we don&#x27;t have &quot;</span> + requested_topping + <span class="string">&quot;.&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Adding mushrooms.</span><br><span class="line">Sorry, we don&#x27;t have french fries.</span><br><span class="line">Adding extra cheese.</span><br><span class="line"></span><br><span class="line">Finished making your pizza!</span><br></pre></td></tr></table></figure>
 
     
 
@@ -322,7 +362,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/01/29/Python/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/02/03/Python/">展开全文 >></a>
     </p>
     
 
